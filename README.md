@@ -58,4 +58,4 @@ You can also drop a `.zip` / `.stl` / `.3mf` onto the viewer, or press **Alt + S
 
 ## License
 
-MIT
+Apache. Your contributions are welcome.

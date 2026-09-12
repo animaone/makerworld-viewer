@@ -38,13 +38,6 @@ You can also drop a `.zip` / `.stl` / `.3mf` onto the viewer, or press **Alt + S
 | Select file | Click a sidebar row |
 | Close | **Esc** |
 
-## How it works
-
-1. **Intercept the download.** Hooks `fetch`, `XHR`, `Blob`, `createObjectURL`, `Location.*`, `window.open`, `a.href` / `setAttribute` / `click`, and real `<a>` clicks — whichever MakerWorld uses, we catch it.
-2. **Fetch the zip ourselves**, verify the `PK\x03\x04` magic bytes, feed it to the parser.
-3. **Re-trigger the browser download** from a local blob, so your file still lands in `~/Downloads`.
-4. **Parse with JSZip**, list every `.stl` / `.3mf`, pre-render a thumbnail per file, and render on click.
-
 ## Notes
 
 - Uses **`TrackballControls`** (not `OrbitControls`) — quaternion-based, no poles, no axis limits.
